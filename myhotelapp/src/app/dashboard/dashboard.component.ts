@@ -8,21 +8,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class DashboardComponent implements OnInit {
 
- /* formValue=FormGroup;*/
-
-  constructor(private formBuilder:FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
-
-  /*  this.formValue1 = this.formBuilder.group({ 
-
-    name:[''],
-    mobile:[''],
-    email:[''],
-    address:[''],
-    services:['']
-
-    }) */
   }
 
 }
