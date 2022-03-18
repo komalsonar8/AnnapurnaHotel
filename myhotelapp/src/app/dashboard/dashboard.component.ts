@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+ /* formValue=FormGroup;*/
+
+  constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+
+  /*  this.formValue1 = this.formBuilder.group({ 
+
+    name:[''],
+    mobile:[''],
+    email:[''],
+    address:[''],
+    services:['']
+
+    }) */
   }
 
 }
