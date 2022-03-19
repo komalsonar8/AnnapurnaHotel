@@ -22,7 +22,11 @@ export class DashboardComponent implements OnInit {
       mobile: [''],
       address: [''],
       services: ['']
-    })
+    });
+
+    this.api.getRestaurant().subscribe((res: any) => {
+      console.log(res);
+    });
     
   }
 
@@ -35,15 +39,18 @@ export class DashboardComponent implements OnInit {
       this.restaurantmodelobject.address=this.formValue.value.address;
       this.restaurantmodelobject.services=this.formValue.value.services;
 
-      this.api.postRestaurant(this.restaurantmodelobject).subscribe(res=>{
+      this.api.postRestaurant(this.restaurantmodelobject).subscribe((res: any) => {
         console.log(res);
-        alert("Restaurant Record Added Successfully");
-      },
-      err=>{
-        alert("Something Went Wrong!!!!");
+      });
+      // .subscribe(res=>{
+      //   console.log(res);
+      //   alert("Restaurant Record Added Successfully");
+      // },
+      // err=>{
+      //   alert("Something Went Wrong!!!!");
 
-      }
-      )
+      // }
+      // )
       
     }
   
